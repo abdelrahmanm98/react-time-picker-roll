@@ -55,15 +55,15 @@ export default const  MyApp = () => {
 
 ## API
 
-| Name | Type | Default | Description |
+| Name               | Type                                          | Default        | Description                                                     |
 
 | ------------------ | --------------------------------------------- | -------------- | --------------------------------------------------------------- |
 
-| value | String | n/a | Current value. |
+| value              | String                                        | n/a            | Current value.                                                  |
 
-| name | String | n/a | Input time picker name |
+| name               | String                                        | n/a            | Input time picker name                                          |
 
-| onChange | `(value) => alert ('New time is: ', value)` | n/a | Called when select a different value |
+| onChange           | `(value) => alert ('New time is: ', value)`   | n/a            | Called when select a different value                            |
 
 ## License
 
