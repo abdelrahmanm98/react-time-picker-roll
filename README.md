@@ -17,7 +17,6 @@ npm install react-time-picker-roll
 ```js
 
 import React, { useState } from 'react';
-
 import { TimePickerComponent } from 'my-time-picker';
 
 
@@ -37,18 +36,14 @@ export default const  MyApp = () => {
 
 
    return (
-
       <div>
-
         <TimePickerComponent
           initialTime={value}
           onChange={handleTimeChange} />
 
        <p>Selected Time: {value} </p>
       </div>
-
    );
-
 }
 
 ```

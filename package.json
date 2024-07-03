@@ -6,6 +6,23 @@
   "main": "dist/index.js",
   "module": "dist/index.esm.js",
   "types": "dist/index.d.ts",
+  "keywords": [
+    "React time picker roll",
+    "React time picker",
+    "time picker",
+    "time picker roll",
+    "time roll",
+    "React component",
+    "React time input",
+    "time selection",
+    "time input",
+    "React time widget",
+    "time selection tool",
+    "time picker component",
+    "custom time picker",
+    "time input control",
+    "React UI component"
+  ],
   "files": [
     "dist"
   ],
