@@ -21,7 +21,19 @@
     "time picker component",
     "custom time picker",
     "time input control",
-    "React UI component"
+    "React UI component",
+    "alarm time",
+    "alarm clock",
+    "iOS time picker",
+    "Android time picker",
+    "mobile time picker",
+    "digital clock",
+    "time management",
+    "time setting",
+    "clock picker",
+    "scheduler",
+    "React alarm",
+    "React clock"
   ],
   "files": [
     "dist"
