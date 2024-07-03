@@ -1,6 +1,5 @@
 [![npm](https://img.shields.io/npm/v/react-time-picker-roll)](https://www.npmjs.com/package/react-time-picker-roll) ![downloads](https://img.shields.io/npm/dt/react-time-picker-roll?color=blue&logo=npm&logoColor=blue) ![NPM Downloads](https://img.shields.io/npm/d18m/react-time-picker-roll)
 
-
 # React time picker roll
 
 A Simple time picker roll for React or Next app.
@@ -61,6 +60,8 @@ export default const  MyApp = () => {
 | ------------------ | --------------------------------------------- | -------------- | --------------------------------------------------------------- |
 
 | value | String | n/a | Current value. |
+
+| name | String | n/a | Input time picker name |
 
 | onChange | `(value) => alert ('New time is: ', value)` | n/a | Called when select a different value |
 
