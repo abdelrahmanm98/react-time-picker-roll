@@ -1,0 +1,91 @@
+.timePicker {
+  width: 100%;
+  min-width: max-content;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: transparent;
+  padding: 20px;
+  border-radius: 10px;
+  color: white;
+  font-family: 'Arial', sans-serif;
+  gap: 10px;
+  user-select: none;
+  -webkit-user-select: none;
+}
+
+.column {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  position: relative;
+}
+
+.timeSection,
+.periodSection {
+  position: relative;
+  overflow-y: auto;
+  height: 200px;
+  width: 60px;
+  scrollbar-width: none;
+  -ms-overflow-style: none;
+  user-select: none;
+  -webkit-user-select: none;
+  scroll-snap-type: y mandatory;
+}
+
+.timeSection::-webkit-scrollbar,
+.periodSection::-webkit-scrollbar {
+  display: none;
+}
+
+.scrollItems {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  height: auto;
+}
+
+.timeItem {
+  font-size: 24px;
+  height: 40px;
+  user-select: none;
+  -webkit-user-select: none;
+  scroll-snap-align: center;
+  color: #ededed;
+}
+
+.timeItem.selected {
+  color: white;
+}
+
+.timeSection::before,
+.timeSection::after {
+  content: '';
+  display: block;
+  height: 80px;
+}
+
+.column::before,
+.column::after {
+  content: '';
+  position: absolute;
+  width: 100%;
+  height: 2px;
+  background-color: white;
+  left: 0;
+}
+
+.column::before {
+  top: 80px;
+}
+
+.column::after {
+  top: 120px;
+}
+
+.arrow {
+  cursor: pointer;
+  font-size: 24px;
+  user-select: none;
+}
