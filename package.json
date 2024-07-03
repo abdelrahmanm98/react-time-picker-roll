@@ -1,7 +1,8 @@
 {
-  "name": "time-picker-roll",
+  "name": "react-time-picker-roll",
   "version": "0.1.0",
   "private": false,
+  "description": "A simple time picker component for React",
   "main": "dist/index.js",
   "module": "dist/index.esm.js",
   "types": "dist/index.d.ts",
@@ -28,6 +29,12 @@
     "rollup-plugin-postcss": "^4.0.0",
     "typescript": "^4.9.5"
   },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/abdelrahmanm98/react-time-picker-roll"
+  },
+  "author": "Abdelrahman Elmetwally",
+  "license": "MIT",
   "dependencies": {
     "@testing-library/jest-dom": "^5.17.0",
     "@testing-library/react": "^13.4.0",
