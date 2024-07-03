@@ -1,4 +1,5 @@
-[![npm](https://img.shields.io/npm/v/react-time-picker-roll)](https://www.npmjs.com/package/react-time-picker-roll) ![downloads](https://img.shields.io/npm/dt/react-time-picker-roll?color=blue&logo=npm&logoColor=blue)
+[![npm](https://img.shields.io/npm/v/react-time-picker-roll)](https://www.npmjs.com/package/react-time-picker-roll) ![downloads](https://img.shields.io/npm/dt/react-time-picker-roll?color=blue&logo=npm&logoColor=blue) ![NPM Downloads](https://img.shields.io/npm/d18m/react-time-picker-roll)
+
 
 # React time picker roll
 
