@@ -1,12 +1,13 @@
 {
   "name": "react-time-picker-roll",
-  "version": "0.1.4",
+  "version": "0.1.5",
   "private": false,
-  "description": "A simple time picker component for React",
+  "description": "A beautiful, smooth, and interactive time picker component for React applications with iOS-style rolling animation",
   "main": "dist/index.js",
   "module": "dist/index.esm.js",
   "types": "dist/index.d.ts",
   "keywords": [
+    "react-time-picker-roll",
     "React time picker roll",
     "React time picker",
     "time picker",
@@ -33,7 +34,13 @@
     "clock picker",
     "scheduler",
     "React alarm",
-    "React clock"
+    "React clock",
+    "framer-motion",
+    "glassmorphism",
+    "interactive",
+    "smooth animations",
+    "TypeScript",
+    "responsive"
   ],
   "files": [
     "dist"
@@ -58,6 +65,7 @@
     "rollup-plugin-postcss": "^4.0.0",
     "typescript": "^4.9.5"
   },
+  "homepage": "https://time-picker-demo.vercel.app",
   "repository": {
     "type": "git",
     "url": "https://github.com/abdelrahmanm98/react-time-picker-roll"
@@ -72,6 +80,7 @@
     "@types/node": "^16.18.101",
     "@types/react": "^18.3.3",
     "@types/react-dom": "^18.3.0",
+    "framer-motion": "^12.23.0",
     "react": "^18.3.1",
     "react-dom": "^18.3.1",
     "react-scripts": "5.0.1",

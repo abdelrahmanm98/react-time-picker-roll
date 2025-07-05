@@ -32,6 +32,7 @@
   user-select: none;
   -webkit-user-select: none;
   scroll-snap-type: y mandatory;
+  overscroll-behavior: contain;
 }
 
 .timeSection::-webkit-scrollbar,
@@ -49,14 +50,21 @@
 .timeItem {
   font-size: 24px;
   height: 40px;
+  line-height: 40px;
   user-select: none;
   -webkit-user-select: none;
   scroll-snap-align: center;
   color: #ededed;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0;
+  margin: 0;
 }
 
 .timeItem.selected {
   color: white;
+  font-weight: bold;
 }
 
 .timeSection::before,
@@ -88,4 +96,13 @@
   cursor: pointer;
   font-size: 24px;
   user-select: none;
+}
+
+.timePickerColumn {
+  scrollbar-width: none; /* Firefox */
+  -ms-overflow-style: none; /* IE 10+ */
+  overscroll-behavior: contain;
+}
+.timePickerColumn::-webkit-scrollbar {
+  display: none; /* Chrome/Safari/Webkit */
 }
