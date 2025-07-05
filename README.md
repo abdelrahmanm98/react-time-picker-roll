@@ -9,7 +9,11 @@
   
   [![Demo](https://img.shields.io/badge/Live%20Demo-View%20Here-blue?style=for-the-badge&logo=vercel)](https://time-picker-demo.vercel.app)
   
-  ![Time Picker Demo](https://raw.githubusercontent.com/abdelrahmanm98/react-time-picker-roll/main/assets/Time-Picker2.gif)
+  <b>Default usage (without input field):</b><br/>
+  <img src="https://raw.githubusercontent.com/abdelrahmanm98/react-time-picker-roll/main/assets/Time-Picker2.gif" alt="Time Picker Demo" width="350"/>
+  
+  <b>With input field (asInput):</b><br/>
+  <img src="https://raw.githubusercontent.com/abdelrahmanm98/react-time-picker-roll/main/assets/Time-Picker2aslink.gif" alt="Time Picker as Input Demo" width="350"/>
 </div>
 
 ## ✨ Features
@@ -37,31 +41,45 @@ import { TimePickerComponent } from 'react-time-picker-roll';
 const App = () => {
   const [time, setTime] = useState({ hours: 6, minutes: 0, period: 'AM' });
 
-  const handleTimeChange = (newTime) => {
-    console.log('Selected time:', newTime);
-    setTime(newTime);
-  };
-
   return (
     <div>
-      <TimePickerComponent initialTime={time} onChange={handleTimeChange} />
-      <p>
-        Selected Time: {time.hours}:{time.minutes.toString().padStart(2, '0')}{' '}
-        {time.period}
-      </p>
+      {/* Default usage */}
+      <TimePickerComponent initialTime={time} onChange={setTime} />
+
+      {/* Glassmorphism style */}
+      <TimePickerComponent
+        initialTime={time}
+        onChange={setTime}
+        variant='glass'
+      />
+
+      {/* Professional style */}
+      <TimePickerComponent
+        initialTime={time}
+        onChange={setTime}
+        variant='professional'
+      />
+
+      {/* Input field (modal picker) */}
+      <TimePickerComponent initialTime={time} onChange={setTime} asInput />
     </div>
   );
 };
 ```
 
+> You can use the picker directly or as an input field (modal). See the GIFs above for both options.
+
 ## 📖 API Reference
 
 ### Props
 
-| Prop          | Type                                                                 | Default                                  | Description                         |
-| ------------- | -------------------------------------------------------------------- | ---------------------------------------- | ----------------------------------- |
-| `initialTime` | `{ hours: number; minutes: number; period: string }`                 | `{ hours: 6, minutes: 0, period: 'AM' }` | Initial time value                  |
-| `onChange`    | `(time: { hours: number; minutes: number; period: string }) => void` | -                                        | Callback function when time changes |
+| Prop          | Type                                                                 | Default                                  | Description                                                       |
+| ------------- | -------------------------------------------------------------------- | ---------------------------------------- | ----------------------------------------------------------------- |
+| `initialTime` | `{ hours: number; minutes: number; period: string }`                 | `{ hours: 6, minutes: 0, period: 'AM' }` | Initial time value                                                |
+| `onChange`    | `(time: { hours: number; minutes: number; period: string }) => void` | -                                        | Callback function when time changes                               |
+| `natural`     | `boolean`                                                            | `false`                                  | If true, removes background, shadow, and padding for a plain look |
+| `variant`     | `'default' \| 'professional' \| 'glass'`                             | `'default'`                              | 'glass' for glassmorphism style, 'professional' for modern look   |
+| `asInput`     | `boolean`                                                            | `false`                                  | If true, shows an input field and opens the picker in a modal     |
 
 ### Time Object Structure
 
@@ -75,43 +93,26 @@ interface TimeValue {
 
 ## 🎨 Customization
 
-The component uses CSS modules for styling. You can customize the appearance by overriding the CSS classes:
+The component uses CSS modules for styling, but also provides global class names for easy targeting:
+
+- `.rtp-time-picker` (main container)
+- `.rtp-time-picker-column` (each column)
+- `.rtp-time-item` (each time value)
+
+You can customize the appearance by overriding these classes in your own CSS:
 
 ```css
-.timePicker {
+.rtp-time-picker {
   /* Custom styles for the main container */
 }
 
-.timeItem {
-  /* Custom styles for time items */
+.rtp-time-picker-column {
+  /* Custom styles for columns */
 }
 
-.selected {
+.rtp-time-item.selected {
   /* Custom styles for selected item */
 }
-```
-
-## 🌟 Examples
-
-### Basic Usage
-
-```jsx
-<TimePickerComponent
-  initialTime={{ hours: 9, minutes: 30, period: 'AM' }}
-  onChange={(time) => console.log(time)}
-/>
-```
-
-### With State Management
-
-```jsx
-const [selectedTime, setSelectedTime] = useState({
-  hours: 12,
-  minutes: 0,
-  period: 'PM',
-});
-
-<TimePickerComponent initialTime={selectedTime} onChange={setSelectedTime} />;
 ```
 
 ## 🛠️ Development
