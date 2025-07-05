@@ -1,6 +1,6 @@
 {
   "name": "react-time-picker-roll",
-  "version": "1.2.0",
+  "version": "1.2.1",
   "private": false,
   "description": "A beautiful, smooth, and interactive time picker component for React applications with iOS-style rolling animation",
   "main": "dist/index.js",
