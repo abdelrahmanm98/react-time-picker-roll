@@ -1,4 +1,4 @@
-import { jsxs, jsx } from 'react/jsx-runtime';
+import { jsxs, jsx, Fragment as Fragment$1 } from 'react/jsx-runtime';
 import { createContext, useRef, useLayoutEffect, useEffect, useContext, useId, useCallback, useMemo, useInsertionEffect, forwardRef, Fragment, createElement, Component, useState } from 'react';
 
 /******************************************************************************
@@ -10625,8 +10625,8 @@ function styleInject(css, ref) {
   }
 }
 
-var css_248z = ".TimePicker-module_timePicker__-V-nQ {\r\n  width: 100%;\r\n  min-width: max-content;\r\n  display: flex;\r\n  justify-content: center;\r\n  align-items: center;\r\n  background-color: transparent;\r\n  padding: 20px;\r\n  border-radius: 10px;\r\n  color: white;\r\n  font-family: 'Arial', sans-serif;\r\n  gap: 10px;\r\n  user-select: none;\r\n  -webkit-user-select: none;\r\n}\r\n\r\n.TimePicker-module_column__b6kEV {\r\n  display: flex;\r\n  flex-direction: column;\r\n  align-items: center;\r\n  position: relative;\r\n}\r\n\r\n.TimePicker-module_timeSection__ReKr0,\r\n.TimePicker-module_periodSection__yZ7EC {\r\n  position: relative;\r\n  overflow-y: auto;\r\n  height: 200px;\r\n  width: 60px;\r\n  scrollbar-width: none;\r\n  -ms-overflow-style: none;\r\n  user-select: none;\r\n  -webkit-user-select: none;\r\n  scroll-snap-type: y mandatory;\r\n  overscroll-behavior: contain;\r\n}\r\n\r\n.TimePicker-module_timeSection__ReKr0::-webkit-scrollbar,\r\n.TimePicker-module_periodSection__yZ7EC::-webkit-scrollbar {\r\n  display: none;\r\n}\r\n\r\n.TimePicker-module_scrollItems__5mcvC {\r\n  display: flex;\r\n  flex-direction: column;\r\n  align-items: center;\r\n  height: auto;\r\n}\r\n\r\n.TimePicker-module_timeItem__oIB2- {\r\n  font-size: 24px;\r\n  height: 40px;\r\n  line-height: 40px;\r\n  user-select: none;\r\n  -webkit-user-select: none;\r\n  scroll-snap-align: center;\r\n  color: #ededed;\r\n  display: flex;\r\n  align-items: center;\r\n  justify-content: center;\r\n  padding: 0;\r\n  margin: 0;\r\n}\r\n\r\n.TimePicker-module_timeItem__oIB2-.TimePicker-module_selected__P26qC {\r\n  color: white;\r\n  font-weight: bold;\r\n}\r\n\r\n.TimePicker-module_timeSection__ReKr0::before,\r\n.TimePicker-module_timeSection__ReKr0::after {\r\n  content: '';\r\n  display: block;\r\n  height: 80px;\r\n}\r\n\r\n.TimePicker-module_column__b6kEV::before,\r\n.TimePicker-module_column__b6kEV::after {\r\n  content: '';\r\n  position: absolute;\r\n  width: 100%;\r\n  height: 2px;\r\n  background-color: white;\r\n  left: 0;\r\n}\r\n\r\n.TimePicker-module_column__b6kEV::before {\r\n  top: 80px;\r\n}\r\n\r\n.TimePicker-module_column__b6kEV::after {\r\n  top: 120px;\r\n}\r\n\r\n.TimePicker-module_arrow__wWZjS {\r\n  cursor: pointer;\r\n  font-size: 24px;\r\n  user-select: none;\r\n}\r\n\r\n.TimePicker-module_timePickerColumn__gLbWD {\r\n  scrollbar-width: none; /* Firefox */\r\n  -ms-overflow-style: none; /* IE 10+ */\r\n  overscroll-behavior: contain;\r\n}\r\n.TimePicker-module_timePickerColumn__gLbWD::-webkit-scrollbar {\r\n  display: none; /* Chrome/Safari/Webkit */\r\n}\r\n";
-var styles = {"timePicker":"TimePicker-module_timePicker__-V-nQ","column":"TimePicker-module_column__b6kEV","timeSection":"TimePicker-module_timeSection__ReKr0","periodSection":"TimePicker-module_periodSection__yZ7EC","scrollItems":"TimePicker-module_scrollItems__5mcvC","timeItem":"TimePicker-module_timeItem__oIB2-","selected":"TimePicker-module_selected__P26qC","arrow":"TimePicker-module_arrow__wWZjS","timePickerColumn":"TimePicker-module_timePickerColumn__gLbWD"};
+var css_248z = ".TimePicker-module_timePicker__-V-nQ {\r\n  display: flex;\r\n  justify-content: center;\r\n  align-items: center;\r\n  background-color: transparent;\r\n  padding: 20px;\r\n  border-radius: 10px;\r\n  color: white;\r\n  font-family: 'Arial', sans-serif;\r\n  gap: 16px;\r\n  user-select: none;\r\n  -webkit-user-select: none;\r\n  margin: 0 auto;\r\n  /* width: fit-content; */\r\n  /* min-width: unset; */\r\n  box-sizing: border-box;\r\n}\r\n\r\n.TimePicker-module_column__b6kEV {\r\n  display: flex;\r\n  flex-direction: column;\r\n  align-items: center;\r\n  position: relative;\r\n}\r\n\r\n.TimePicker-module_timeSection__ReKr0,\r\n.TimePicker-module_periodSection__yZ7EC {\r\n  width: 60px;\r\n  height: 200px;\r\n  overflow: hidden;\r\n  position: relative;\r\n  display: flex;\r\n  flex-direction: column;\r\n  align-items: center;\r\n  background: rgba(255, 255, 255, 0.04);\r\n  border-radius: 10px;\r\n  box-shadow: rgba(0, 0, 0, 0.04) 0px 2px 8px;\r\n}\r\n\r\n.TimePicker-module_timeSection__ReKr0::-webkit-scrollbar,\r\n.TimePicker-module_periodSection__yZ7EC::-webkit-scrollbar {\r\n  display: none;\r\n}\r\n\r\n.TimePicker-module_scrollItems__5mcvC {\r\n  display: flex;\r\n  flex-direction: column;\r\n  align-items: center;\r\n  height: auto;\r\n}\r\n\r\n.TimePicker-module_timeItem__oIB2- {\r\n  font-size: 24px;\r\n  height: 40px;\r\n  line-height: 40px;\r\n  user-select: none;\r\n  -webkit-user-select: none;\r\n  scroll-snap-align: center;\r\n  color: rgba(255, 255, 255, 0.6);\r\n  display: flex;\r\n  align-items: center;\r\n  justify-content: center;\r\n  padding: 0;\r\n  margin: 0;\r\n  transition: color 0.2s, text-shadow 0.2s;\r\n}\r\n\r\n.TimePicker-module_timeItem__oIB2-.TimePicker-module_selected__P26qC {\r\n  color: #fff;\r\n  font-weight: bold;\r\n  text-shadow: 0 2px 8px rgba(0, 0, 0, 0.1), 0 0px 1px #fff;\r\n  border-radius: 8px;\r\n}\r\n\r\n.TimePicker-module_professional__1PIL6 .TimePicker-module_timeItem__oIB2- {\r\n  color: rgba(255, 255, 255, 0.6);\r\n}\r\n\r\n.TimePicker-module_professional__1PIL6 .TimePicker-module_timeItem__oIB2-.TimePicker-module_selected__P26qC {\r\n  color: #fff;\r\n  font-weight: bold;\r\n  background: none;\r\n  text-shadow: none;\r\n  border-radius: 0;\r\n}\r\n\r\n.TimePicker-module_timeSection__ReKr0::before,\r\n.TimePicker-module_timeSection__ReKr0::after {\r\n  content: '';\r\n  display: block;\r\n  height: 80px;\r\n}\r\n\r\n.TimePicker-module_column__b6kEV::before,\r\n.TimePicker-module_column__b6kEV::after {\r\n  content: '';\r\n  position: absolute;\r\n  width: 100%;\r\n  height: 2px;\r\n  background-color: white;\r\n  left: 0;\r\n}\r\n\r\n.TimePicker-module_column__b6kEV::before {\r\n  top: 80px;\r\n}\r\n\r\n.TimePicker-module_column__b6kEV::after {\r\n  top: 120px;\r\n}\r\n\r\n.TimePicker-module_arrow__wWZjS {\r\n  cursor: pointer;\r\n  font-size: 24px;\r\n  user-select: none;\r\n}\r\n\r\n.TimePicker-module_timePickerColumn__gLbWD {\r\n  scrollbar-width: none; /* Firefox */\r\n  -ms-overflow-style: none; /* IE 10+ */\r\n  overscroll-behavior: contain;\r\n}\r\n.TimePicker-module_timePickerColumn__gLbWD::-webkit-scrollbar {\r\n  display: none; /* Chrome/Safari/Webkit */\r\n}\r\n";
+var styles = {"timePicker":"TimePicker-module_timePicker__-V-nQ","column":"TimePicker-module_column__b6kEV","timeSection":"TimePicker-module_timeSection__ReKr0","periodSection":"TimePicker-module_periodSection__yZ7EC","scrollItems":"TimePicker-module_scrollItems__5mcvC","timeItem":"TimePicker-module_timeItem__oIB2-","selected":"TimePicker-module_selected__P26qC","professional":"TimePicker-module_professional__1PIL6","arrow":"TimePicker-module_arrow__wWZjS","timePickerColumn":"TimePicker-module_timePickerColumn__gLbWD"};
 styleInject(css_248z);
 
 var HOURS = Array.from({ length: 12 }, function (_, i) { return i + 1; });
@@ -10639,10 +10639,13 @@ var clamp = function (value, min, max) {
     return Math.max(min, Math.min(value, max));
 };
 var TimePickerComponent = function (_a) {
-    var initialTime = _a.initialTime, onChange = _a.onChange;
+    var initialTime = _a.initialTime, onChange = _a.onChange, natural = _a.natural, variant = _a.variant, asInput = _a.asInput;
     var _b = useState((initialTime === null || initialTime === void 0 ? void 0 : initialTime.hours) || 6), hours = _b[0], setHours = _b[1];
     var _c = useState((initialTime === null || initialTime === void 0 ? void 0 : initialTime.minutes) || 0), minutes = _c[0], setMinutes = _c[1];
     var _d = useState((initialTime === null || initialTime === void 0 ? void 0 : initialTime.period) || 'AM'), period = _d[0], setPeriod = _d[1];
+    var _e = useState(false), showPicker = _e[0], setShowPicker = _e[1];
+    var inputRef = useRef(null);
+    var pickerRef = useRef(null);
     var hoursY = useMotionValue(-((hours - 1) * ITEM_HEIGHT));
     var minutesY = useMotionValue(-(minutes * ITEM_HEIGHT));
     var periodY = useMotionValue(-(PERIODS.indexOf(period) * ITEM_HEIGHT));
@@ -10739,18 +10742,102 @@ var TimePickerComponent = function (_a) {
             return function () { return periodCol.removeEventListener('wheel', handler_3); };
         }
     }, [periodColRef.current, hours, minutes, period]);
-    var renderColumn = function (arr, value, y, type, ref) { return (jsxs("div", __assign({ ref: ref, className: 'timePickerColumn', style: {
-            width: 60,
-            height: ITEM_HEIGHT * VISIBLE_ITEMS,
-            overflow: 'hidden',
-            position: 'relative',
-            display: 'flex',
-            flexDirection: 'column',
-            alignItems: 'center',
-            background: 'rgba(255,255,255,0.04)',
-            borderRadius: 10,
-            boxShadow: '0 2px 8px rgba(0,0,0,0.04)',
-        } }, { children: [jsx("div", { style: {
+    useEffect(function () {
+        if (!asInput || !showPicker)
+            return;
+        function handleClick(e) {
+            if (pickerRef.current &&
+                !pickerRef.current.contains(e.target) &&
+                inputRef.current &&
+                !inputRef.current.contains(e.target)) {
+                setShowPicker(false);
+            }
+        }
+        document.addEventListener('mousedown', handleClick);
+        return function () { return document.removeEventListener('mousedown', handleClick); };
+    }, [asInput, showPicker]);
+    var formatTime = function (t) {
+        return "".concat(t.hours.toString().padStart(2, '0'), ":").concat(t.minutes
+            .toString()
+            .padStart(2, '0'), " ").concat(t.period);
+    };
+    if (asInput) {
+        return (jsxs("div", __assign({ style: { position: 'relative', display: 'inline-block' } }, { children: [jsx("input", { ref: inputRef, type: 'text', value: formatTime({ hours: hours, minutes: minutes, period: period }), readOnly: true, onClick: function () { return setShowPicker(true); }, className: 'rtp-time-picker-input', style: {
+                        width: 160,
+                        padding: '10px 14px',
+                        border: '1px solid #cbd5e1',
+                        borderRadius: 6,
+                        fontSize: 16,
+                        background: '#fff',
+                        color: '#222e3a',
+                        cursor: 'pointer',
+                        outline: showPicker ? '2px solid #667eea' : 'none',
+                        transition: 'outline 0.2s',
+                    } }), showPicker && (jsxs(Fragment$1, { children: [jsx("div", { className: 'rtp-time-picker-modal-overlay', style: {
+                                position: 'fixed',
+                                top: 0,
+                                left: 0,
+                                width: '100vw',
+                                height: '100vh',
+                                background: 'rgba(30, 34, 45, 0.25)',
+                                zIndex: 1000,
+                                transition: 'opacity 0.2s',
+                                opacity: showPicker ? 1 : 0,
+                            }, onClick: function () { return setShowPicker(false); } }), jsx("div", __assign({ className: 'rtp-time-picker-modal', style: {
+                                position: 'fixed',
+                                top: '50%',
+                                left: '50%',
+                                transform: 'translate(-50%, -50%) scale(' +
+                                    (showPicker ? 1 : 0.95) +
+                                    ')',
+                                background: 'none',
+                                zIndex: 1001,
+                                transition: 'transform 0.2s',
+                                minWidth: 320,
+                                minHeight: 220,
+                                display: 'flex',
+                                flexDirection: 'column',
+                                alignItems: 'center',
+                                justifyContent: 'center',
+                            }, tabIndex: -1 }, { children: jsx(TimePickerComponent, { initialTime: { hours: hours, minutes: minutes, period: period }, onChange: function (t) {
+                                    setHours(t.hours);
+                                    setMinutes(t.minutes);
+                                    setPeriod(t.period);
+                                    onChange(t);
+                                }, natural: natural, variant: variant }) }))] }))] })));
+    }
+    var renderColumn = function (arr, value, y, type, ref, glass, variant) { return (jsxs("div", __assign({ ref: ref, className: 'timePickerColumn rtp-time-picker-column' +
+            (variant === 'professional' ? ' professional' : ''), style: __assign({ width: 60, height: ITEM_HEIGHT * VISIBLE_ITEMS, overflow: 'hidden', position: 'relative', display: 'flex', flexDirection: 'column', alignItems: 'center' }, (glass
+            ? variant === 'professional'
+                ? {
+                    background: 'linear-gradient(135deg, #667eea 0%, #957cafba 100%)',
+                    borderRadius: 16,
+                    boxShadow: '0 4px 24px 0 rgba(76, 0, 255, 0.10)',
+                    backdropFilter: 'blur(12px)',
+                    WebkitBackdropFilter: 'blur(12px)',
+                    border: '2px solid rgba(255,255,255,0.18)',
+                }
+                : variant === 'glass'
+                    ? {
+                        width: '60px',
+                        height: '200px',
+                        overflow: 'hidden',
+                        position: 'relative',
+                        display: 'flex',
+                        flexDirection: 'column',
+                        alignItems: 'center',
+                        background: 'rgba(255, 255, 255, 0.04)',
+                        borderRadius: 10,
+                        boxShadow: 'rgba(0, 0, 0, 0.04) 0px 2px 8px',
+                    }
+                    : {
+                        background: 'rgba(255,255,255,0.08)',
+                        borderRadius: 10,
+                        boxShadow: '0 2px 8px rgba(0,0,0,0.04)',
+                        backdropFilter: 'blur(8px)',
+                        WebkitBackdropFilter: 'blur(8px)',
+                    }
+            : {})) }, { children: [jsx("div", { style: {
                     position: 'absolute',
                     top: ITEM_HEIGHT * PADDING_ITEMS,
                     left: 0,
@@ -10760,21 +10847,46 @@ var TimePickerComponent = function (_a) {
                     borderBottom: '2px solid #fff8',
                     pointerEvents: 'none',
                     zIndex: 2,
-                } }), jsxs(motion.div, __assign({ style: { y: y }, drag: 'y', dragConstraints: { top: -(arr.length - 1) * ITEM_HEIGHT, bottom: 0 }, dragElastic: 0.2, onDragEnd: function (_, info) { return handleDragEnd(type, y.get()); }, whileTap: { cursor: 'grabbing' } }, { children: [Array.from({ length: PADDING_ITEMS }).map(function (_, i) { return (jsx("div", { style: { height: ITEM_HEIGHT } }, 'pad-top-' + i)); }), arr.map(function (item, idx) { return (jsx("div", __assign({ className: styles.timeItem + ' ' + (value === item ? styles.selected : ''), style: {
+                } }), jsxs(motion.div, __assign({ style: { y: y }, drag: 'y', dragConstraints: { top: -(arr.length - 1) * ITEM_HEIGHT, bottom: 0 }, dragElastic: 0.2, onDragEnd: function (_, info) { return handleDragEnd(type, y.get()); }, whileTap: { cursor: 'grabbing' } }, { children: [Array.from({ length: PADDING_ITEMS }).map(function (_, i) { return (jsx("div", { style: { height: ITEM_HEIGHT } }, 'pad-top-' + i)); }), arr.map(function (item, idx) { return (jsx("div", __assign({ className: styles.timeItem +
+                            ' rtp-time-item ' +
+                            (value === item ? styles.selected + ' selected' : ''), style: {
                             height: ITEM_HEIGHT,
                             textAlign: 'center',
                             fontWeight: value === item ? 700 : 400,
                         } }, { children: typeof item === 'number' ? item.toString().padStart(2, '0') : item }), item)); }), Array.from({ length: PADDING_ITEMS }).map(function (_, i) { return (jsx("div", { style: { height: ITEM_HEIGHT } }, 'pad-bot-' + i)); })] }))] }))); };
-    return (jsxs("div", __assign({ className: styles.timePicker, style: {
-            boxShadow: '0 8px 32px rgba(0,0,0,0.12)',
-            background: 'rgba(255,255,255,0.08)',
-            display: 'flex',
-            gap: 16,
-            justifyContent: 'center',
-            alignItems: 'center',
-            padding: 24,
-            borderRadius: 24,
-        } }, { children: [renderColumn(HOURS, hours, hoursY, 'hour', hoursColRef), renderColumn(MINUTES, minutes, minutesY, 'minute', minutesColRef), renderColumn(PERIODS, period, periodY, 'period', periodColRef)] })));
+    return (jsxs("div", __assign({ className: styles.timePicker + ' rtp-time-picker', style: natural
+            ? { display: 'flex', gap: 16 }
+            : variant === 'professional'
+                ? {
+                    boxShadow: 'rgba(0, 0, 0, 0.12) 0px 8px 32px',
+                    background: 'linear-gradient(135deg, #667eea 0%, #764ba2ba 100%)',
+                    display: 'flex',
+                    gap: 16,
+                    justifyContent: 'center',
+                    alignItems: 'center',
+                    padding: 24,
+                    borderRadius: 24,
+                }
+                : variant === 'glass'
+                    ? {
+                        boxShadow: 'rgba(0, 0, 0, 0.12) 0px 8px 32px',
+                        background: 'rgba(255, 255, 255, 0.08)',
+                        display: 'flex',
+                        gap: 16,
+                        justifyContent: 'center',
+                        alignItems: 'center',
+                        padding: 24,
+                        borderRadius: 24,
+                    }
+                    : {
+                        display: 'flex',
+                        gap: 16,
+                        background: '#f3f4f6',
+                        justifyContent: 'center',
+                        alignItems: 'center',
+                        padding: 24,
+                        borderRadius: 24,
+                    } }, { children: [renderColumn(HOURS, hours, hoursY, 'hour', hoursColRef, !natural, variant), renderColumn(MINUTES, minutes, minutesY, 'minute', minutesColRef, !natural, variant), renderColumn(PERIODS, period, periodY, 'period', periodColRef, !natural, variant)] })));
 };
 
 export { TimePickerComponent };

@@ -10,6 +10,9 @@ interface TimePickerProps {
         minutes: number;
         period: string;
     }) => void;
+    natural?: boolean;
+    variant?: 'default' | 'professional' | 'glass';
+    asInput?: boolean;
 }
 declare const TimePickerComponent: React.FC<TimePickerProps>;
 export default TimePickerComponent;
