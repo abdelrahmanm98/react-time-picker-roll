@@ -8,12 +8,13 @@
   A beautiful, smooth, and interactive time picker component for React applications with iOS-style rolling animation.
   
   [![Demo](https://img.shields.io/badge/Live%20Demo-View%20Here-blue?style=for-the-badge&logo=vercel)](https://time-picker-demo.vercel.app)
-  
-  <b>Default usage (without input field):</b><br/>
-  <img src="https://raw.githubusercontent.com/abdelrahmanm98/react-time-picker-roll/main/assets/Time-Picker2.gif" alt="Time Picker Demo" width="350"/>
-  
-  <b>With input field (asInput):</b><br/>
-  <img src="https://raw.githubusercontent.com/abdelrahmanm98/react-time-picker-roll/main/assets/Time-Picker2aslink2.gif" alt="Time Picker as Input Demo" width="350"/>
+
+<b>Default usage (without input field):</b><br/>
+<img src="https://raw.githubusercontent.com/abdelrahmanm98/react-time-picker-roll/main/assets/Time-Picker2.gif" alt="Time Picker Demo" width="350"/>
+
+<b>With input field (asInput):</b><br/>
+<img src="https://raw.githubusercontent.com/abdelrahmanm98/react-time-picker-roll/main/assets/Time-Picker2aslink.gif" alt="Time Picker as Input Demo" width="350"/>
+
 </div>
 
 ## ✨ Features
@@ -25,6 +26,13 @@
 - 🎪 **Customizable**: Easy to style and integrate into any design
 - 🔧 **TypeScript**: Full TypeScript support with proper type definitions
 - 🚀 **Lightweight**: Minimal bundle size with no heavy dependencies
+
+---
+
+<b>Want to try or download the full purple-style demo project?</b><br/>
+👉 <a href="https://github.com/abdelrahmanm98/react-time-picker-roll-demo"><b>View or Download the Demo Project on GitHub</b></a>
+
+---
 
 ## 📦 Installation
 
