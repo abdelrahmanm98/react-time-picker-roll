@@ -13,7 +13,7 @@
 <img src="https://raw.githubusercontent.com/abdelrahmanm98/react-time-picker-roll/main/assets/Time-Picker2.gif" alt="Time Picker Demo" width="350"/>
 
 <b>With input field (asInput):</b><br/>
-<img src="https://raw.githubusercontent.com/abdelrahmanm98/react-time-picker-roll/main/assets/Time-Picker2aslink.gif" alt="Time Picker as Input Demo" width="350"/>
+<img src="https://raw.githubusercontent.com/abdelrahmanm98/react-time-picker-roll/main/assets/Time-Picker2aslink2.gif" alt="Time Picker as Input Demo" width="350"/>
 
 </div>
 
